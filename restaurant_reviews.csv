@@ -1,0 +1,38 @@
+import pandas as pd
+
+# Creating a small dataset of restaurant reviews
+data = {
+    'Review': [
+        "The food was amazing!",
+        "I hated the taste of the pasta.",
+        "The place was okay, not too great.",
+        "Excellent service and delicious meals.",
+        "Worst dining experience ever.",
+        "It was fine, nothing special.",
+        "Totally loved the ambiance!",
+        "The waiter was rude.",
+        "I would come back again!",
+        "Not worth the money."
+    ],
+    'Sentiment': [
+        "Positive",
+        "Negative",
+        "Neutral",
+        "Positive",
+        "Negative",
+        "Neutral",
+        "Positive",
+        "Negative",
+        "Positive",
+        "Negative"
+    ]
+}
+
+# Convert to DataFrame (like Excel table)
+df = pd.DataFrame(data)
+
+# Save it as a CSV file
+df.to_csv("restaurant_reviews.csv", index=False)
+
+# Display the data
+df
